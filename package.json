@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "db:seed": "node --env-file .env --experimental-strip-types --no-warnings --watch src/db/seed.ts"
   },
   "keywords": [],
@@ -21,6 +23,8 @@
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
+    "@fastify/multipart": "^9.0.3",
+    "@google/genai": "^1.9.0",
     "drizzle-orm": "^0.44.2",
     "fastify-type-provider-zod": "^5.0.1",
     "postgres": "^3.4.7",
